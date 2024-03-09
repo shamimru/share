@@ -1,0 +1,178 @@
+<!-- {{title}}
+<br><br>
+<label for="check">Check</label>
+<input type="checkbox" id="check" ame="isActive" [(ngModel)]="isActive">
+
+<br><br>
+
+<p *ngIf="isActive; else other" [ngClass]=" isActive  ? 'red': 'green'"  n>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, aliquid?</p>
+
+
+<ng-template #other>
+  <p>other Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ullam quidem corporis enim voluptatibus deleniti accusamus saepe non, nisi eaque!</p>
+</ng-template>
+
+<p>
+  Hello bangladesh
+</p>
+
+<div *ngFor='let item of countries'>
+  <p> This is a repeated paragraph: {{item}} </p>
+</div> -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body class="container my-5">
+  <!-- <div class=" d-flex gap-2">
+    <div *ngFor='let item of countries' class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{item}} </h5>
+        <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div> - -->
+
+
+
+  <!-- photos -->
+
+
+  <div class=" row gap-2 my-5 text-center">
+    <div *ngFor='let item of products' class="card" style="width: 17rem;">
+      <div class="card-body text-center">
+        <h5 class="card-title">ID: {{item.id}} </h5>
+        <h4>Name : {{item.name}} </h4>
+        <h4>price :{{item.price}} </h4>
+        <h4>Stock : {{item.stock}} </h4>
+        <h4> </h4> <img src="{{item.photos}}" height="200px" width="200px" alt="">
+
+        <p class="card-text"> Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+
+        <h3> <span style="color: #F3A847;"><i class="fa-solid fa-star"></i> </span>
+          <span style="color: #F3A847;"><i class="fa-solid fa-star"></i></span>
+          <span style="color: #F3A847;"><i class="fa-solid fa-star"></i></span>
+          <span style="color: #F3A847;"> <i class="fa-solid fa-star"></i></span>
+          <span style="color: black;"><i class="fa-solid fa-star"></i></span>
+        </h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container bg-success">
+    <div class="row">
+
+      <div class="col-md-4">
+
+        <select class="form-select" #dd (change)="m1(dd.value)"  aria-label="Default select example">
+          <option *ngFor="let i of products; let z=index" [value]="z">{{i.id}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <img src="{{product.photos}}" height="120px" width="200px" alt="">
+        <div class="card-body">
+          <h5 class="card-title">
+            <h5>{{product.id}} </h5>
+            <h5>{{product.name}} </h5>
+            <h5>{{product.stock}} </h5>
+            <h5>{{product.price}} </h5>
+          
+
+          </h5>
+        </div>
+        <div class="card-footer">
+          <small iv class="text-body-secondary"></small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option  *ngFor="let i of products">{{i.id}}  value="{{i.id}}"</option>
+
+        </select>
+      </div>
+
+
+
+      <div class="col-md-6">
+        <img src="{{products.id}}" width="200px" height="120px" alt="">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{products.id}}
+          </h5>
+
+          <h5 class="card-title">
+            {{products.name}}
+          </h5>
+
+          <h5 class="card-title">
+            {{i.stock}}
+          </h5>
+
+
+          <h5 class="card-title">
+            {{products.price}}
+          </h5>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
