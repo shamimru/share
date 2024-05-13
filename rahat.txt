@@ -1,0 +1,13 @@
+create database rahat;
+
+use rahat;
+create table blog (blog_id int primary key auto_increment, writer varchar(50), title varchar(2000) , 
+description varchar(4000), publ_date varchar(40), image varchar(50));
+drop table blog;
+create table comment (comment_id int primary key auto_increment, blog_id int , 
+comments varchar(2000), comm_date varchar(40));
+
+
+select * from blog;
+select * from reply;
+create table reply(reply_id int primary key auto_increment, name varchar(300), reply_date varchar(30));
